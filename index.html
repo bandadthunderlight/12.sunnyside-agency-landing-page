@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+</head>
+
+<body>
+
+  <section class="menuBar-section">
+    <div class="menuBar-container">
+      <div class="menuBar-logoWrapper">
+        <img class="menuBar-logo" src="./images/logo.svg" />
+      </div>
+      <div class="menuBar-itemWrapper notShow">
+        <div class="menuBar-item">About</div>
+        <div class="menuBar-item">Services</div>
+        <div class="menuBar-item">Projects</div>
+        <div class="menuBar-item" id="contact-menuitem">CONTACT</div>
+      </div>
+      <div class="burger-wrapper " onclick="burgerClick()">
+        <img src="./images/icon-hamburger.svg" />
+      </div>
+    </div>
+    <div class="menuBar-titleWrapper">
+      <div class="menuBar-title">WE ARE CREATIVES</div>
+      <div class="menuBar-titleIcon">
+        <img src="./images/icon-arrow-down.svg" />
+      </div>
+    </div>
+  </section>
+
+  <section class="unitPosterText-section">
+    <div class="unitPosterText-container" id="first-unitPoster">
+      <div class="unitPosterText-posterType">
+        <img class="unitPosterText-poster" src="./images/desktop/image-transform.jpg" />
+      </div>
+      <div class="unitPosterText-textType">
+        <p class="unitPosterText-title">Transform your brand</p>
+        <p class="unitPosterText-text">We are a full-service creative agency specializing in helping brands grow fast.
+          Engage your clients through compelling visuals that do most of the marketing for you.</p>
+        <p class="unitPosterText-btn">LEARN MORE</p>
+        <span class="label first-label"></span>
+      </div>
+    </div>
+
+    <div class="unitPosterText-container" id="second-unitPoster">
+      <div class="unitPosterText-posterType">
+        <img class="unitPosterText-poster" src="./images/desktop/image-stand-out.jpg" />
+      </div>
+      <div class="unitPosterText-textType" id="second-unitText">
+        <p class="unitPosterText-title">Stand out to the right audience</p>
+        <p class="unitPosterText-text">Using a collaborative formula of designers, researchers, photographers,
+          videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+        <p class="unitPosterText-btn">LEARN MORE</p>
+        <span class="label second-label"></span>
+      </div>
+    </div>
+
+    <div class="unitPoster-cart-container">
+      <div class="unitPoster-left unitPoster">
+        <p class="unitPoster-title">Graphic Design</p>
+        <p class="unitPoster-text">Great design makes you memorable. We deliver artwork that underscores your brand
+          message and captures potential clients’ attention.</p>
+      </div>
+      <div class="unitPoster-right unitPoster">
+        <p class="unitPoster-title">Photography</p>
+        <p class="unitPoster-text">Increase your credibility by getting the most stunning, high-quality photos that
+          improve your business image.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="testimotional-section">
+    <div class="testimotional-titlebar">
+      <p class="testimotional-title">CLIENT TESTIMONIONALS</p>
+    </div>
+    <div class="testimotional-container">
+      <div class="testimotional-item">
+        <img class="testimotional-img" src="./images/image-emily.jpg" />
+        <p class="testimotional-text"> We put our trust in Sunnyside and they delivered, making sure our needs were met
+          and deadlines were always hit.</p>
+        <div class="testimotional-writer">
+          <p class="testimonial-name">Emily R.</p>
+          <p class="testimonial-ocup">Marketing Director</p>
+        </div>
+      </div>
+      <div class="testimotional-item">
+        <img class="testimotional-img" src="./images/image-thomas.jpg" />
+        <p class="testimotional-text">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success
+          made it a satisfying and enjoyable experience.</p>
+        <div class="testimotional-writer">
+          <p class="testimonial-name">Thomas S.</p>
+          <p class="testimonial-ocup">Chief Operating Officer</p>
+        </div>
+      </div>
+      <div class="testimotional-item">
+        <img class="testimotional-img" src="./images/image-jennie.jpg" />
+        <p class="testimotional-text">Incredible end result! Our sales increased over 400% when we worked with
+          Sunnyside. Highly recommended!</p>
+        <div class="testimotional-writer">
+          <p class="testimonial-name">Jennie F.</p>
+          <p class="testimonial-ocup">Business Owner</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimotional-galleryBar">
+      <div class="testimotional-row">
+        <div class="testimotional-image-holder">
+          <img class="testimotional-image" src="./images/desktop/image-gallery-milkbottles.jpg"
+            id="testimotional-milkbottles" />
+        </div>
+        <div class="testimotional-image-holder">
+          <img class="testimotional-image" src="./images/desktop/image-gallery-orange.jpg" id="testimotional-orange" />
+        </div>
+      </div>
+      <div class="testimotional-row">
+        <div class="testimotional-image-holder">
+          <img class="testimotional-image" src="./images/desktop/image-gallery-cone.jpg" id="testimotional-cone" />
+        </div>
+        <div class="testimotional-image-holder">
+          <img class="testimotional-image" src="./images/desktop/image-gallery-sugarcubes.jpg"
+            id="testimotional-sugarcubes" />
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="footer-section">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img class="footer-logoImg" src="./images/logo2.svg" />
+      </div>
+      <div class="footer-links">
+        <p class="footer-linkItem">About</p>
+        <p class="footer-linkItem">Services</p>
+        <p class="footer-linkItem">Projects</p>
+      </div>
+      <div class="footer-sicials">
+        <div class="footer-socialItem">
+          <img class="social-icon" src="./images/icon-facebook.svg" />
+        </div>
+        <div class="footer-socialItem">
+          <img class="social-icon" src="./images/icon-instagram.svg" />
+        </div>
+        <div class="footer-socialItem">
+          <img class="social-icon" src="./images/icon-twitter.svg" />
+        </div>
+        <div class="footer-socialItem">
+          <img class="social-icon" src="./images/icon-pinterest.svg" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./app.js"></script>
+</body>
+
+</html>

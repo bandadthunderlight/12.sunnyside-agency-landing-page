@@ -1,0 +1,711 @@
+@font-face {
+  font-family: Fraunces;
+  src: url(./fonts/Fraunces/Fraunces_72pt-Regular.ttf);
+}
+@font-face {
+  font-family: Fraunces-Bold;
+  src: url(./fonts/Fraunces/static/Fraunces_9pt_SuperSoft-Bold.ttf);
+}
+@font-face {
+  font-family: Barlow;
+  src: url(./fonts/Barlow/Barlow-Regular.ttf);
+}
+
+:root {
+  /* ### Primary */
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+
+  /* (graphic design text) */
+  --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+
+  /* (photography text) */
+  --Dark-blue: hsl(198, 62%, 26%);
+
+  /* (footer) */
+  --Dark-moderate-cyan: hsl(168, 34%, 41%);
+
+  /* ### Neutral */
+  --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Barlow;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+/* mediom devices (portrait tablets and large phones, 650px and up) */
+@media only screen and (min-width: 650px) {
+  /* ------------------menuBar-section-------------------- */
+  .menuBar-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./images/desktop/image-header.jpg);
+    background-size: cover;
+    color: var(--White);
+  }
+  .menuBar-container {
+    width: 94%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .menuBar-logo {
+    width: 10.5rem;
+  }
+  .menuBar-itemWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0rem;
+  }
+  .burger-wrapper {
+    display: none;
+  }
+  .menuBar-item {
+    font-size: large;
+    /* font-family: Fraunces; */
+    font-family: Barlow;
+    font-weight: 900;
+    padding: 1rem 1.7rem;
+    border-radius: 2rem;
+  }
+  .menuBar-item:hover {
+    cursor: pointer;
+    color: var(--Very-dark-desaturated-blue);
+  }
+  #contact-menuitem {
+    background-color: var(--White);
+    color: var(--Very-dark-desaturated-blue);
+    font-family: Fraunces;
+    font-size: medium;
+    font-weight: 900;
+    padding: 1.2rem 2rem;
+  }
+  #contact-menuitem:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: var(--White);
+    cursor: pointer;
+  }
+  .menuBar-titleWrapper {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menuBar-title {
+    font-size: 3.2rem;
+    font-family: Fraunces-Bold;
+    font-weight: 900;
+    letter-spacing: 0.7rem;
+    margin-bottom: 6rem;
+  }
+  /* ------------------unitPosterText-section-------------------- */
+
+  .unitPosterText-section {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .unitPosterText-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+  #first-unitPoster {
+    flex-direction: row-reverse;
+    gap: 0;
+  }
+  .unitPosterText-posterType {
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: auto;
+  }
+  .unitPosterText-poster {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+  .unitPosterText-textType {
+    width: 50%;
+    padding: 3rem 6.9rem 3rem 9.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem 0;
+  }
+  #second-unitText {
+    padding: 3rem 8rem 3rem 6.9rem;
+  }
+  .unitPosterText-title {
+    padding: 0rem 1rem 0rem 0rem;
+    font-size: 2.5rem;
+    font-family: Fraunces-Bold;
+    font-weight: 900;
+    color: var(--Very-dark-desaturated-blue);
+  }
+  .unitPosterText-text {
+    font-family: Barlow;
+    color: var(--Dark-grayish-blue);
+    line-height: 2rem;
+  }
+  .unitPosterText-btn {
+    font-size: medium;
+    color: var(--Very-dark-desaturated-blue);
+    font-family: Fraunces-Bold;
+    font-weight: 500;
+  }
+  .unitPosterText-btn:hover ~ .label {
+    cursor: pointer;
+  }
+  .unitPosterText-btn:hover ~ .first-label {
+    background-color: var(--Yellow);
+  }
+  .unitPosterText-btn:hover ~ .second-label {
+    background-color: var(--Soft-red);
+  }
+  .unitPosterText-btn:hover {
+    cursor: pointer;
+  }
+  .label {
+    height: 0.5rem;
+    background-color: hsla(51, 100%, 49%, 0.507);
+    position: relative;
+    top: -2.5rem;
+    left: -0.4rem;
+    width: 7rem;
+    z-index: -1;
+    border-radius: 5px;
+    padding: 0 4rem;
+    text-align: center;
+  }
+  .first-label {
+    background-color: hsla(51, 100%, 49%, 0.5);
+  }
+  .second-label {
+    background-color: hsl(7, 99%, 70%, 0.5);
+  }
+  /* ----------------unitPoster------------------------- */
+  .unitPoster-cart-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .unitPoster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 600px;
+  }
+  .unitPoster-left {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    color: var(--Dark-desaturated-cyan);
+    background-size: cover;
+  }
+  .unitPoster-right {
+    background-image: url(./images/desktop/image-photography.jpg);
+    color: var(--Dark-blue);
+    background-size: cover;
+  }
+  .unitPoster-title {
+    font-size: 1.7rem;
+    font-family: Fraunces-Bold;
+    font-weight: 900;
+    margin-top: 23rem;
+    margin-bottom: 1.9rem;
+  }
+  .unitPoster-text {
+    padding: 0 11rem;
+    font-size: medium;
+    text-align: center;
+    line-height: 1.8rem;
+    font-weight: 600;
+  }
+  /* -------------------testimotional-section----------------------- */
+  .testimotional-section {
+    margin-top: 6rem;
+  }
+  .testimotional-titlebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Grayish-blue);
+  }
+  .testimotional-title {
+    font-size: 1.2rem;
+    font-family: Fraunces-Bold;
+    font-weight: 400;
+    margin: 4.5rem 0;
+    letter-spacing: 0.2rem;
+  }
+  .testimotional-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .testimotional-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .testimotional-img {
+    width: 4.5rem;
+    border-radius: 50%;
+  }
+  .testimotional-text {
+    text-align: center;
+    color: var(--Very-dark-grayish-blue);
+    margin: 3rem 0;
+    line-height: 2rem;
+  }
+  .testimotional-writer {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .testimonial-name {
+    color: var(--Very-dark-desaturated-blue);
+    font-family: Fraunces-Bold;
+    font-weight: 700;
+  }
+  .testimonial-ocup {
+    color: var(--Dark-grayish-blue);
+    font-size: small;
+  }
+  /* -------------galleryBar------------------ */
+  .testimotional-galleryBar {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .testimotional-row {
+    display: flex;
+    width: 50%;
+  }
+  .testimotional-image-holder {
+    width: 50%;
+  }
+  .testimotional-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ----------------------footer-section--------------------- */
+  .footer-section {
+    background-color: rgb(157, 226, 211);
+    color: var(--Dark-moderate-cyan);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-container {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    margin: 1rem;
+  }
+  .footer-logoImg {
+    width: 10rem;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin: 1rem 0;
+  }
+  .footer-sicials {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 4rem 0;
+  }
+  .footer-linkItem:hover {
+    color: var(--White);
+    cursor: pointer;
+  }
+  .social-icon:hover {
+    color: var(--White);
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 650px) {
+  /* ------------------menuBar-section-------------------- */
+  .menuBar-section {
+    text-align: center;
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./images/mobile/image-header.jpg);
+    background-size: cover;
+    color: var(--White);
+  }
+  .menuBar-container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .menuBar-logo {
+    width: 8rem;
+  }
+  .menuBar-itemWrapper {
+    position: absolute;
+    background-color: var(--White);
+    color: var(--Dark-grayish-blue);
+    top: 6rem;
+    width: 90%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .notShow {
+    display: none;
+  }
+  .burger-wrapper {
+  }
+  .burger-wrapper:hover {
+    cursor: pointer;
+  }
+  .menuBar-item {
+    font-size: large;
+    font-family: Barlow;
+    font-weight: 900;
+    padding: 1rem 1.7rem;
+    border-radius: 2rem;
+  }
+  .menuBar-item:hover {
+    cursor: pointer;
+    color: var(--Very-dark-desaturated-blue);
+  }
+  #contact-menuitem {
+    background-color: var(--Yellow);
+    color: var(--Very-dark-desaturated-blue);
+    font-family: Fraunces;
+    font-size: 0.9rem;
+    font-weight: 900;
+    padding: 1.2rem 2rem;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+  }
+  #contact-menuitem:hover {
+    color: black;
+    cursor: pointer;
+  }
+  .menuBar-titleWrapper {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menuBar-title {
+    font-size: 2.5rem;
+    font-family: Fraunces-Bold;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    margin-bottom: 6rem;
+  }
+  .menuBar-titleIcon {
+  }
+  /* ------------------unitPosterText-section-------------------- */
+
+  .unitPosterText-section {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .unitPosterText-container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #first-unitPoster {
+    flex-direction: column;
+  }
+  .unitPosterText-posterType {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .unitPosterText-poster {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .unitPosterText-textType {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem 0;
+  }
+  .unitPosterText-title {
+    font-size: 2rem;
+    font-family: Fraunces-Bold;
+    font-weight: 900;
+    color: var(--Very-dark-desaturated-blue);
+  }
+  .unitPosterText-text {
+    font-family: Barlow;
+    color: var(--Dark-grayish-blue);
+    line-height: 2rem;
+  }
+  .unitPosterText-btn {
+    align-self: center;
+    font-size: medium;
+    color: var(--Very-dark-desaturated-blue);
+    font-family: Fraunces-Bold;
+    font-weight: 500;
+  }
+  .unitPosterText-btn:hover ~ .label {
+    cursor: pointer;
+  }
+  .unitPosterText-btn:hover ~ .first-label {
+    background-color: var(--Yellow);
+  }
+  .unitPosterText-btn:hover ~ .second-label {
+    background-color: var(--Soft-red);
+  }
+  .unitPosterText-btn:hover {
+    cursor: pointer;
+  }
+  .label {
+    height: 0.5rem;
+    background-color: hsla(51, 100%, 49%, 0.507);
+    position: relative;
+    top: -2.5rem;
+    /* left: 30%; */
+    margin: 0 auto;
+    width: 7rem;
+    z-index: -1;
+    border-radius: 5px;
+    padding: 0 4rem;
+    text-align: center;
+  }
+  .first-label {
+    background-color: hsla(51, 100%, 49%, 0.5);
+  }
+  .second-label {
+    background-color: hsl(7, 99%, 70%, 0.5);
+  }
+  /* ----------------unitPoster------------------------- */
+  .unitPoster-cart-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .unitPoster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+  }
+  .unitPoster-left {
+    background-image: url(./images/mobile/image-graphic-design.jpg);
+    color: var(--Dark-desaturated-cyan);
+    background-size: 100% 100%;
+  }
+  .unitPoster-right {
+    background-image: url(./images/mobile/image-photography.jpg);
+    color: var(--Dark-blue);
+    background-size: 100% 100%;
+  }
+  .unitPoster-title {
+    margin-top: 400px;
+    font-size: 1.7rem;
+    font-family: Fraunces-Bold;
+    font-weight: 900;
+  }
+  .unitPoster-text {
+    padding: 1rem;
+    font-size: medium;
+    text-align: center;
+    line-height: 1.8rem;
+    font-weight: 600;
+  }
+  /* -------------------testimotional-section----------------------- */
+  .testimotional-titlebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Grayish-blue);
+  }
+  .testimotional-title {
+    font-size: 1rem;
+    font-family: Fraunces-Bold;
+    font-weight: 400;
+    margin: 4.5rem 0;
+    letter-spacing: 0.2rem;
+  }
+  .testimotional-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .testimotional-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .testimotional-img {
+    width: 4.5rem;
+    border-radius: 50%;
+  }
+  .testimotional-text {
+    text-align: center;
+    color: var(--Very-dark-grayish-blue);
+    margin: 1.5rem 0;
+    line-height: 2rem;
+  }
+  .testimotional-writer {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .testimonial-name {
+    color: var(--Very-dark-desaturated-blue);
+    font-family: Fraunces-Bold;
+    font-weight: 700;
+  }
+  .testimonial-ocup {
+    color: var(--Dark-grayish-blue);
+    font-size: small;
+  }
+  /* -------------galleryBar------------------ */
+  .testimotional-galleryBar {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .testimotional-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .testimotional-image-holder {
+    width: 50%;
+  }
+  .testimotional-image {
+    width: 100%;
+    height: 100%;
+  }
+  #testimotional-milkbottles {
+    content: url("./images/mobile/image-gallery-milkbottles.jpg");
+  }
+  #testimotional-orange {
+    content: url("./images/mobile/image-gallery-orange.jpg");
+  }
+  #testimotional-cone {
+    content: url("./images/mobile/image-gallery-cone.jpg");
+  }
+  #testimotional-sugarcubes {
+    content: url("./images/mobile/image-gallery-sugar-cubes.jpg");
+  }
+
+  /* ----------------------footer-section--------------------- */
+  .footer-section {
+    background-color: rgb(157, 226, 211);
+    color: var(--Dark-moderate-cyan);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-container {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    margin: 1rem;
+  }
+  .footer-logoImg {
+    width: 10rem;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin: 1rem 0;
+  }
+  .footer-sicials {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 4rem 0 1rem 0;
+  }
+  .footer-linkItem:hover {
+    color: var(--White);
+    cursor: pointer;
+  }
+  .social-icon:hover {
+    color: var(--White);
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+  }
+}
